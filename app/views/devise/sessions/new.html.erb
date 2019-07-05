@@ -1,29 +1,25 @@
 <div class="form-container" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(/assets/garbage.jpg); background-size: cover;">
   <div class="formulaire">
-
-
-      <h1 class="connexion"> <span class="highlighted highlighted-yellow">Je me connecte</span></h1>
-
-
+     <div class="container">
+      <h1 class="connexion"> <span class="links">Hello !</span></h1>
       <%= simple_form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
-
-      <div class="form-inputs">
-        <%= f.input :email,
-                    label: "Email",
-                    required: false,
-                    autofocus: true,
-                    input_html: { autocomplete: "email" } %>
-        <%= f.input :password,
-                    label: "Mot de passe",
-                    required: false,
-                    input_html: { autocomplete: "current-password" } %>
-        <%= f.input :remember_me, as: :boolean if devise_mapping.rememberable? %>
-      </div>
-
-          <div class="form-actions">
-            <%= f.button :submit, "Se connecter" %>
-          </div>
+        <div class="form-inputs">
+          <%= f.input :email,
+                      label: "",
+                      required: false,
+                      autofocus: true,
+                      input_html: { autocomplete: "email" } %>
+          <%= f.input :password,
+                      label: "Mot de passe",
+                      required: false,
+                      input_html: { autocomplete: "current-password" } %>
+          <%= f.input :remember_me, as: :boolean if devise_mapping.rememberable? %>
         </div>
+
+        <div class="form-actions">
+          <%= f.button :submit, "Se connecter" %>
+        </div>
+     </div>
   </div>
-    <% end %>
 </div>
+<% end %>
